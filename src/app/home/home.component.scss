@@ -1,0 +1,21 @@
+.body-home {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-image: url('./../../assets/image/landing_background.png');
+  min-height: 100vh;
+  .body-image {
+    width: 95%;
+    height: auto;
+    display: flex;
+    align-self: center;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .body-home {
+  }
+}

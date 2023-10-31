@@ -1,0 +1,90 @@
+<form class="raffle-form" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+  <p>¡Ingresa el código de tu boleta aquí y participa!</p>
+  <mat-form-field>
+    <mat-label>Elige el sorteo</mat-label>
+    <mat-select formControlName="SBoleta">
+      <mat-option value="0">Sorteo 01</mat-option>
+      <mat-option value="1">Sorteo 02</mat-option>
+      <mat-option value="2">Sorteo 03</mat-option>
+      <mat-option value="3">Sorteo 04</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Seleccione su Provincia</mat-label>
+    <mat-select formControlName="Sorteo">
+      <mat-option value="0">Lima</mat-option>
+      <mat-option value="1">Juliaca</mat-option>
+      <mat-option value="2">Arequipa</mat-option>
+      <mat-option value="3">Cusco</mat-option>
+      <mat-option value="4">Trujillo</mat-option>
+      <mat-option value="5">Iquitos</mat-option>
+      <mat-option value="6">Piura</mat-option>
+      <mat-option value="7">Chiclayo</mat-option>
+      <mat-option value="8">Huancayo</mat-option>
+      <mat-option value="9">Tacna</mat-option>
+      <mat-option value="10">Pucallpa</mat-option>
+      <mat-option value="11">Chimbote</mat-option>
+      <mat-option value="12">Ica</mat-option>
+      <mat-option value="13">Huaraz</mat-option>
+      <mat-option value="14">Ayacucho</mat-option>
+      <mat-option value="15">Cajamarca</mat-option>
+      <mat-option value="16">Tumbes</mat-option>
+      <mat-option value="17">Tarapoto</mat-option>
+      <mat-option value="18">Puno</mat-option>
+      <mat-option value="19">Moquegua</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Tipo de documento</mat-label>
+    <mat-select formControlName="TDocumento">
+      <mat-option value="0">Dni</mat-option>
+      <mat-option value="0">Carnet de extranjeria</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Numero de documento</mat-label>
+    <input
+      matInput
+      formControlName="NDocumento"
+      type="tel"
+      maxlength="8"
+      minlength="8"
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Nombres</mat-label>
+    <input matInput formControlName="Nombres" type="text" maxlength="50" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Apellido Paterno</mat-label>
+    <input matInput formControlName="PApellido" type="text" maxlength="50" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Apellido Materno</mat-label>
+    <input matInput formControlName="MApellido" type="text" maxlength="50" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Fecha de Nacimiento</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="NFecha" />
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Genero</mat-label>
+    <mat-select formControlName="Genero">
+      <mat-option value="0">Masculino</mat-option>
+      <mat-option value="1">Femenino</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Celular</mat-label>
+    <input
+      matInput
+      formControlName="Celular"
+      type="tel"
+      maxlength="9"
+      minlength="9"
+    />
+  </mat-form-field>
+  <button type="submit">Enviar</button>
+</form>
